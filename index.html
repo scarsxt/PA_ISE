@@ -1,0 +1,200 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Bank Account Opening Form</title>
+  <link rel="stylesheet" type="text/css" href="design.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Bank Account Opening Form</h2>
+    <form>
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+      
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+      
+      <label for="accountType">Account Type:</label>
+      <select id="accountType" name="accountType" required>
+        <option value="">Select Account Type</option>
+        <option value="savings">Savings</option>
+        <option value="checking">Checking</option>
+      </select>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #85fefd;
+      margin: 0;
+      padding: 0;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-container h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"]
+    select {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    select {
+      height: 38px;
+    }
+    .error-message {
+      color: red;
+      font-size: 0.8em;
+      margin-top: 5px;
+    }
+    button[type="submit"] {
+      background-color: #00828f;
+      color: #ffffff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+    button[type="submit"]:hover {
+      background-color: #005a64;
+    }
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+      color: #00828f;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .header img {
+      height: 50px;
+    }
+  </style>
+  <script>
+    
+  </script>
+</head>
+<body>
+  <div class="header">
+    <img src="./images/logo.jpg" alt="Logo">
+    <h1>ALL CITIZENS BANK</h1>
+  </div>
+  <div class="form-container">
+    <h2>Personal Information</h2>
+    <form id="myForm" onsubmit="validateForm(event)">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="maidenName">Maiden Name:</label>
+        <input type="text" id="maidenName" name="maidenName">
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="maritalStatus">Marital Status:</label>
+        <select id="maritalStatus" name="maritalStatus" required>
+          <option value="">Select</option>
+          <option value="single">Single</option>
+          <option value="married">Married</option>
+          <option value="divorced">Divorced</option>
+          <option value="widowed">Widowed</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="aadhaar">Aadhaar Card:</label>
+        <input type="text" id="aadhaar" name="aadhaar" pattern="[0-9]{12}" title="Aadhaar card should be a 12-digit number" required>
+      </div>
+      <div class="form-group">
+        <label for="pan">PAN Card:</label>
+        <input type="text" id="pan" name="pan" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" title="PAN card should be in the format ABCDE1234F" required>
+      </div>  
+      <div class="form-group">
+        <label for="guardians">Name of Guardians:</label>
+        <input type="text" id="guardians" name="guardians" required>
+      </div>
+      <div class="form-group">
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" name="nationality" required>
+      </div>
+      <div class="form-group">
+        <label for="occupation">Occupation Type:</label>
+        <input type="text" id="occupation" name="occupation" required>
+      </div>
+      <div class="form-group">
+        <label for="income">Annual Income:</label>
+        <input type="number" id="income" name="income" required>
+      </div>
+      <div class="form-group">
+        <label for="religion">Religion:</label>
+        <input type="text" id="religion" name="religion" required>
+      </div>
+      <div class="form-group">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
